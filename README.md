@@ -1,6 +1,5 @@
-# Welcome to Node 16!
+# website-chat-relay
 
-This template provides an easy way to use NodeJS v16 on Replit! As of writing, NodeJS repls have Node v12, which is several years out of date.
+Sends messages back and forth from a Minecraft server defined in 'server.js'.
 
-## Differences from Node Repls
-If you're used to the Node repl environment, you'll notice that there's no unit testing menu. To use unit tests, try using a library such as [Testing Library](https://testing-library.com/) or [Jest](https://jestjs.io/).
+You may notice that node_modules is missing and thats cus its literally a black hole
