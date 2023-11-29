@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>chat is this real</title>
+    <link rel="icon" href="/misc/favicon.ico" type="image/x-icon">
+    <style>
+      body { 
+        color: white;
+        background: linear-gradient(-32deg, #91edff, #e7c9ff, #e4dbff, #c9feff);
+        background-size: 400% 0.5%;
+        animation: gradient 100s pulse 1s ease infinite;
+        background-color: white;
+      }
+      @keyframes gradient {
+        0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+              100% { background-position: 0% 50%;  }
+      }
+
+
+      .mainContent {
+        background: rgba(76, 175, 80, 1)
+        margin: 0;
+        position: absolute;
+        left: 5%;
+        top: 5%;
+        
+        font-family: Helvetica;
+        
+      }
+      .mainContent.clickable {
+        pointer-events: auto;
+      }
+      .header {
+        color: #535454;
+        font-size: 110%;
+      }
+    
+      .text{
+        color: #535454;
+        font-variant-emoji: text;
+        text-align:center;
+      }
+      .chat{
+        color: #535454;
+        font-variant-emoji: text
+        text-align:left;
+        font-size: 150%;
+      }
+      
+      #titleText {
+        font-size: 250%;     
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="mainContent">
+      <span id="titleText" class="text">
+      chat is this real
+      </span>
+      <br>
+      <label id="flavorText" class="header"><a href="https://github.com/firef1a/website-chat-relay">gitbub</a></label>
+      <br>
+      <br>
+      <label id="server" class="header">IP Address: no connection :/</label> <br>
+      <label id="playersOnline" class="header">Players: N/A</label><br>
+      <label id="latency" class="header">Latency: 0ms</label>
+      
+      <br>
+      <br>
+      <div>
+        <label for="fname" class="header">Auth Token:</label><br>
+        <input type="password" id="password" name="fname" value=""><br>
+        <label for="msg" class="header">Message:</label>
+        <div style="display:flex">
+        <input type="text" id="sendmessage" name="msg" value=""><br>
+
+        <input type="submit" value="Submit" onclick="onChatSumbit()">
+        </div>
+      </div>
+      <br>
+      
+      <div id="chatbox" class="chat"></div>
+    </div>
+    
+
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="/client.js"></script>
+  </body>
+</html>
